@@ -1,0 +1,15 @@
+sudo apt install curl
+curl https://sdk.cloud.google.com | bash
+    default path (enter)
+    log data (n)
+    modify $PATH (y)
+    leave blank (enter)
+sudo reboot
+gcloud init
+    login (y)
+    login with google OAuth
+    select project by number [1]
+gcloud auth application-default login
+
+sudo systemctl enable mongod.service
+
