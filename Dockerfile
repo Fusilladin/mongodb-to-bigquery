@@ -1,3 +1,4 @@
+
 # Use a base image with Python pre-installed
 FROM python:3.11.2
 
@@ -18,15 +19,14 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && apt-get install -y google-cloud-sdk
 
 # Install Python packages
-RUN pip install --no-cache-dir \
-    functions-framework==3.5.0 \
-    pymongo==4.6.3 \
-    google-cloud-storage==2.16.0 \
-    google-cloud-bigquery==3.20.1 \
-    Flask==3.0.3 \
-    pandas==2.2.1 \
-    pyarrow==15.0.2 \
-    pandas-gbq==0.22.0
+RUN pip install functions-framework==3.5.0
+RUN pip install pymongo==4.6.3
+RUN pip install google-cloud-storage==2.16.0
+RUN pip install google-cloud-bigquery==3.20.1
+RUN pip install Flask==3.0.3
+RUN pip install pandas==2.2.2
+RUN pip install pyarrow==15.0.2
+RUN pip install pandas-gbq==0.22.0
 
 # Configure gcloud (dummy configuration for Dockerfile)
 RUN gcloud config set core/disable_usage_reporting true \
