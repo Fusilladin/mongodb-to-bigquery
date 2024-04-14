@@ -1,7 +1,7 @@
 from flask import abort
 from flask import request
 import functions_framework
-from pymongo import MongoClient
+# from pymongo import MongoClient
 import pandas as pd
 import pandas_gbq
 import json
@@ -20,7 +20,7 @@ def get_server():
 
 project = <project_id>
 dataset = <dataset_id>
-client = MongoClient(get_server())
+# client = MongoClient(get_server())
 
 bigquery_client = bigquery.Client(project=project)
 dataset_id = f'{project}.{dataset}'
